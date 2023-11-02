@@ -8,7 +8,7 @@ import { femaleNames } from "./dataNames/femaleNames";
 import { generateEmail } from "./helpers/emailAddress";
 import { useMemo } from "react";
 import { maleNames } from "./dataNames/maleNames";
-import { generateINN } from "./helpers/TAXGenerator";
+import { TAXGenerator } from "./helpers/TAXGenerator";
 
 function App() {
   const { phone_number, firstname, lastname, middlename, email_address, inn } = INPUT_LABELS;
@@ -26,12 +26,12 @@ function App() {
   return (
     <div>
       <BaseInput label={phone_number} value={generateRussianPhoneNumber()}/>
+      <BaseInput label={email_address} value={generateEmail()}/>
+      <BaseInput label={INPUT_LABELS.password} value={password}/>
       <BaseInput label={lastname} value={transliterator(getNames.lastname)}/>
       <BaseInput label={firstname} value={transliterator(getNames.firstname)}/>
       <BaseInput label={middlename} value={transliterator(getNames.middlename)}/>
-      <BaseInput label={INPUT_LABELS.password} value={password}/>
-      <BaseInput label={email_address} value={generateEmail()}/>
-      <BaseInput label={inn} value={generateINN()}/>
+      <BaseInput label={inn} value={TAXGenerator()}/>
     </div>
   )
 }
