@@ -1,6 +1,7 @@
-import './App.css'
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+
 import { BaseInput } from "./components/BaseInput/BaseInput";
+import { BaseButton } from "./components/Button/Button";
 import { INPUT_LABELS } from "./constants";
 import { password } from "./helpers/password";
 import { transliterator } from "./helpers/namesTranslit";
@@ -9,10 +10,9 @@ import { femaleNames } from "./dataNames/femaleNames";
 import { generateEmail } from "./helpers/emailAddress";
 import { maleNames } from "./dataNames/maleNames";
 import { TAXGenerator } from "./helpers/TAXGenerator";
-import { BaseButton } from "./components/Button/Button";
+import './App.css'
 
 function App() {
-  const { phone_number, firstname, lastname, middlename, email_address, inn } = INPUT_LABELS;
   const randomIndex = Math.floor(Math.random() * 10000);
   const randomGender = Math.round(Math.random());
 
@@ -24,40 +24,45 @@ function App() {
     }
   }, [randomGender, randomIndex])
 
-  const [phoneNumber, setPhoneNumber] = useState(generateRussianPhoneNumber());
-  const [email, setEmail] = useState(generateEmail());
-  const [pass, setPass] = useState(password);
-  const [lastnames, setLastnames] = useState(transliterator(getNames.lastname));
-  const [firstnames, setFirstnames] = useState(transliterator(getNames.firstname));
-  const [middlenames, setMiddlenames] = useState(transliterator(getNames.middlename));
-  const [inns, setInns] = useState(TAXGenerator());
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [middlename, setMiddlename] = useState('');
+  const [inn, setInn] = useState('');
 
   const getStarted = () => {
     setPhoneNumber(generateRussianPhoneNumber());
     setEmail(generateEmail());
-    setLastnames(transliterator(getNames.lastname));
-    setFirstnames(transliterator(getNames.firstname));
-    setMiddlenames(transliterator(getNames.middlename));
-    setInns(TAXGenerator());
+    setPass(password);
+    setLastname(transliterator(getNames.lastname));
+    setFirstname(transliterator(getNames.firstname));
+    setMiddlename(transliterator(getNames.middlename));
+    setInn(TAXGenerator());
   }
+
+  useEffect(() => {
+    getStarted()
+  }, [])
 
   return (
     <div>
       <BaseButton onClick={() => getStarted()}/>
-      <BaseInput label={phone_number}
+      <BaseInput label={INPUT_LABELS.phone_number}
                  value={phoneNumber}/>
-      <BaseInput label={email_address}
+      <BaseInput label={INPUT_LABELS.email_address}
                  value={email}/>
       <BaseInput label={INPUT_LABELS.password}
                  value={pass}/>
-      <BaseInput label={lastname}
-                 value={lastnames}/>
-      <BaseInput label={firstname}
-                 value={firstnames}/>
-      <BaseInput label={middlename}
-                 value={middlenames}/>
-      <BaseInput label={inn}
-                 value={inns}/>
+      <BaseInput label={INPUT_LABELS.lastname}
+                 value={lastname}/>
+      <BaseInput label={INPUT_LABELS.firstname}
+                 value={firstname}/>
+      <BaseInput label={INPUT_LABELS.middlename}
+                 value={middlename}/>
+      <BaseInput label={INPUT_LABELS.inn}
+                 value={inn}/>
     </div>
   )
 }
