@@ -6,12 +6,13 @@ interface IProps {
   value: string,
   label: string,
   setValue?: (arg: string) => void,
+  className?: string,
 }
 
-export const BaseInput = ({value, label, setValue}: IProps) => {
+export const BaseInput = ({value, label, setValue, className}: IProps) => {
 
   return (
-    <Box>
+    <Box className={className}>
       <Box>
         <InputLabel>
           {label}

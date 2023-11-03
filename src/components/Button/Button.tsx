@@ -3,10 +3,11 @@ import { Button } from '@mui/material';
 
 interface IProps {
   onClick: () => void,
+  className?: string,
 }
 
-export const BaseButton = ({onClick}: IProps) => {
+export const BaseButton = ({onClick, className}: IProps) => {
   return (
-      <Button variant="contained" onClick={onClick}>Сгенерировать</Button>
+      <Button className={className} variant="contained" onClick={onClick}>Сгенерировать</Button>
   );
 }

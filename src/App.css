@@ -2,3 +2,18 @@
   margin: 0;
   padding: 0;
 }
+
+.parent_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box_element {
+  align-self: center;
+}

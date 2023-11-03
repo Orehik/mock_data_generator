@@ -47,21 +47,27 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <BaseButton onClick={() => getStarted()}/>
-      <BaseInput label={INPUT_LABELS.phone_number}
-                 value={phoneNumber}/>
-      <BaseInput label={INPUT_LABELS.email_address}
-                 value={email}/>
-      <BaseInput label={INPUT_LABELS.password}
-                 value={pass}/>
-      <BaseInput label={INPUT_LABELS.lastname}
-                 value={lastname}/>
-      <BaseInput label={INPUT_LABELS.firstname}
-                 value={firstname}/>
-      <BaseInput label={INPUT_LABELS.middlename}
-                 value={middlename}/>
-      <BaseInput label={INPUT_LABELS.inn}
+    <div className="parent_container">
+      <BaseButton className="box_element" onClick={() => getStarted()}/>
+      <div className="box_container">
+        <div>
+          <BaseInput label={INPUT_LABELS.phone_number}
+                     value={phoneNumber}/>
+          <BaseInput label={INPUT_LABELS.email_address}
+                     value={email}/>
+          <BaseInput label={INPUT_LABELS.password}
+                     value={pass}/>
+        </div>
+        <div>
+          <BaseInput label={INPUT_LABELS.lastname}
+                     value={lastname}/>
+          <BaseInput label={INPUT_LABELS.firstname}
+                     value={firstname}/>
+          <BaseInput label={INPUT_LABELS.middlename}
+                     value={middlename}/>
+        </div>
+      </div>
+      <BaseInput className="box_element" label={INPUT_LABELS.inn}
                  value={inn}/>
     </div>
   )
