@@ -15,5 +15,6 @@
 }
 
 .box_element {
+  display: flex;
   align-self: center;
 }

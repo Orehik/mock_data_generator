@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
+import { RefreshInn } from "./components/RefreshInn/RefreshInn";
 import { BaseInput } from "./components/BaseInput/BaseInput";
 import { BaseButton } from "./components/Button/Button";
 import { INPUT_LABELS } from "./constants";
@@ -31,6 +32,10 @@ function App() {
   const [firstname, setFirstname] = useState('');
   const [middlename, setMiddlename] = useState('');
   const [inn, setInn] = useState('');
+
+  const innGenerator = () => {
+    setInn(TAXGenerator());
+  }
 
   const getStarted = () => {
     setPhoneNumber(generateRussianPhoneNumber());
@@ -67,8 +72,12 @@ function App() {
                      value={middlename}/>
         </div>
       </div>
-      <BaseInput className="box_element" label={INPUT_LABELS.inn}
-                 value={inn}/>
+      <div className="box_element">
+        <RefreshInn onClick={() => innGenerator()}/>
+        <BaseInput label={INPUT_LABELS.inn}
+                   value={inn}/>
+      </div>
+
     </div>
   )
 }
