@@ -5,7 +5,6 @@ import "./BaseInput.css"
 interface IProps {
   value: string,
   label: string,
-  setValue?: (arg: string) => void,
   className?: string,
 }
 
