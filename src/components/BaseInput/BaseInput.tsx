@@ -9,7 +9,7 @@ interface IProps {
   className?: string,
 }
 
-export const BaseInput = ({value, label, setValue, className}: IProps) => {
+export const BaseInput = ({value, label, className}: IProps) => {
 
   return (
     <Box className={className}>

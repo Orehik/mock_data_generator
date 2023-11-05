@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
+import { Box } from "@mui/material";
 
+import copyValue from "./helpers/copyValue";
 import { RefreshInn } from "./components/RefreshInn/RefreshInn";
 import { BaseInput } from "./components/BaseInput/BaseInput";
-import { BaseButton } from "./components/Button/Button";
+import { BaseButton } from "./components/BaseButton/BaseButton";
 import { INPUT_LABELS } from "./constants";
 import { password } from "./helpers/password";
 import { transliterator } from "./helpers/namesTranslit";
@@ -11,7 +13,8 @@ import { femaleNames } from "./dataNames/femaleNames";
 import { generateEmail } from "./helpers/emailAddress";
 import { maleNames } from "./dataNames/maleNames";
 import { TAXGenerator } from "./helpers/TAXGenerator";
-import './App.css'
+import './App.css';
+
 
 function App() {
   const randomIndex = Math.floor(Math.random() * 10000);
@@ -53,43 +56,64 @@ function App() {
 
   return (
     <div className="parent_container">
-      <BaseButton className="box_element" onClick={() => getStarted()}/>
-      <div className="box_container">
+      <BaseButton className="box_element" onClick={() => getStarted()}>Сгенерировать</BaseButton>
+      <div className="div_container">
         <div>
-          <BaseInput
-            label={INPUT_LABELS.phone_number}
-            value={phoneNumber}
-          />
-          <BaseInput
-            label={INPUT_LABELS.email_address}
-            value={email}
-          />
-          <BaseInput
-            label={INPUT_LABELS.password}
-            value={pass}
-          />
+          <Box className="box_container">
+            <BaseInput
+              label={INPUT_LABELS.phone_number}
+              value={phoneNumber}
+            />
+            <BaseButton className="copy_button" onClick={() => copyValue(phoneNumber)}>Копировать</BaseButton>
+          </Box>
+          <Box className="box_container">
+            <BaseInput
+              label={INPUT_LABELS.email_address}
+              value={email}
+            />
+            <BaseButton className="copy_button" onClick={() => copyValue(email)}>Копировать</BaseButton>
+          </Box>
+          <Box className="box_container">
+            <BaseInput
+              label={INPUT_LABELS.password}
+              value={pass}
+            />
+            <BaseButton className="copy_button" onClick={() => copyValue(pass)}>Копировать</BaseButton>
+          </Box>
         </div>
         <div>
-          <BaseInput
-            label={INPUT_LABELS.lastname}
-            value={lastname}
-          />
-          <BaseInput
-            label={INPUT_LABELS.firstname}
-            value={firstname}
-          />
-          <BaseInput
-            label={INPUT_LABELS.middlename}
-            value={middlename}
-          />
+          <Box className="box_container">
+            <BaseInput
+              label={INPUT_LABELS.lastname}
+              value={lastname}
+            />
+            <BaseButton className="copy_button" onClick={() => copyValue(lastname)}>Копировать</BaseButton>
+          </Box>
+          <Box className="box_container">
+            <BaseInput
+              label={INPUT_LABELS.firstname}
+              value={firstname}
+            />
+            <BaseButton className="copy_button" onClick={() => copyValue(firstname)}>Копировать</BaseButton>
+          </Box>
+          <Box className="box_container">
+            <BaseInput
+              label={INPUT_LABELS.middlename}
+              value={middlename}
+            />
+            <BaseButton className="copy_button" onClick={() => copyValue(middlename)}>Копировать</BaseButton>
+          </Box>
         </div>
       </div>
       <div className="box_element">
         <RefreshInn onClick={() => innGenerator()}/>
-        <BaseInput
-          label={INPUT_LABELS.inn}
-          value={inn}
-        />
+        <Box className="box_container">
+          <BaseInput
+            label={INPUT_LABELS.inn}
+            value={inn}
+          />
+          <BaseButton className="copy_button" onClick={() => copyValue(inn)}>Копировать</BaseButton>
+        </Box>
       </div>
     </div>
   )
