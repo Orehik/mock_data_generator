@@ -77,7 +77,6 @@ function App() {
         <BaseInput label={INPUT_LABELS.inn}
                    value={inn}/>
       </div>
-
     </div>
   )
 }

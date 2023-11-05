@@ -1,9 +1,9 @@
 .icon {
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 35px;
     cursor: pointer;
 }
 
 .icon:active {
-    transform: scale(-0.9);
+    transform: scale(0.9);
 }
