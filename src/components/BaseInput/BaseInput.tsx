@@ -5,11 +5,10 @@ import "./BaseInput.css"
 interface IProps {
   value: string,
   label: string,
-  setValue?: (arg: string) => void,
   className?: string,
 }
 
-export const BaseInput = ({value, label, setValue, className}: IProps) => {
+export const BaseInput = ({value, label, className}: IProps) => {
 
   return (
     <Box className={className}>
