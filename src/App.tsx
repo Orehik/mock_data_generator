@@ -56,26 +56,40 @@ function App() {
       <BaseButton className="box_element" onClick={() => getStarted()}/>
       <div className="box_container">
         <div>
-          <BaseInput label={INPUT_LABELS.phone_number}
-                     value={phoneNumber}/>
-          <BaseInput label={INPUT_LABELS.email_address}
-                     value={email}/>
-          <BaseInput label={INPUT_LABELS.password}
-                     value={pass}/>
+          <BaseInput
+            label={INPUT_LABELS.phone_number}
+            value={phoneNumber}
+          />
+          <BaseInput
+            label={INPUT_LABELS.email_address}
+            value={email}
+          />
+          <BaseInput
+            label={INPUT_LABELS.password}
+            value={pass}
+          />
         </div>
         <div>
-          <BaseInput label={INPUT_LABELS.lastname}
-                     value={lastname}/>
-          <BaseInput label={INPUT_LABELS.firstname}
-                     value={firstname}/>
-          <BaseInput label={INPUT_LABELS.middlename}
-                     value={middlename}/>
+          <BaseInput
+            label={INPUT_LABELS.lastname}
+            value={lastname}
+          />
+          <BaseInput
+            label={INPUT_LABELS.firstname}
+            value={firstname}
+          />
+          <BaseInput
+            label={INPUT_LABELS.middlename}
+            value={middlename}
+          />
         </div>
       </div>
       <div className="box_element">
         <RefreshInn onClick={() => innGenerator()}/>
-        <BaseInput label={INPUT_LABELS.inn}
-                   value={inn}/>
+        <BaseInput
+          label={INPUT_LABELS.inn}
+          value={inn}
+        />
       </div>
     </div>
   )
