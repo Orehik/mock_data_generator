@@ -32,4 +32,6 @@
 
 .copy_button {
   margin-top: 17px !important;
+  display: flex;
+  align-self: center;
 }
