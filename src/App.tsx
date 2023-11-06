@@ -36,6 +36,8 @@ function App() {
   const [middlename, setMiddlename] = useState('');
   const [inn, setInn] = useState('');
 
+  const arrayValue = [phoneNumber, email, pass, lastname, firstname, middlename, inn];
+
   const innGenerator = () => {
     setInn(TAXGenerator());
   }
@@ -113,6 +115,7 @@ function App() {
             value={inn}
           />
           <BaseButton className="copy_button" onClick={() => copyValue(inn)}>Копировать</BaseButton>
+          <BaseButton className="copy_button" onClick={() => copyValue(arrayValue)}>Копировать всё</BaseButton>
         </Box>
       </div>
     </div>
