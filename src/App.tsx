@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Box } from "@mui/material";
 
 import copyValue from "./helpers/copyValue";
-import copyEverything from "./helpers/copyEverything";
 import { RefreshInn } from "./components/RefreshInn/RefreshInn";
 import { BaseInput } from "./components/BaseInput/BaseInput";
 import { BaseButton } from "./components/BaseButton/BaseButton";
@@ -116,7 +115,7 @@ function App() {
             value={inn}
           />
           <BaseButton className="copy_button" onClick={() => copyValue(inn)}>Копировать</BaseButton>
-          <BaseButton className="copy_button" onClick={() => copyEverything(arrayValue)}>Копировать всё</BaseButton>
+          <BaseButton className="copy_button" onClick={() => copyValue(arrayValue)}>Копировать всё</BaseButton>
         </Box>
       </div>
     </div>
