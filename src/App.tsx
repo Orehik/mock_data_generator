@@ -15,7 +15,6 @@ import { maleNames } from "./dataNames/maleNames";
 import { TAXGenerator } from "./helpers/TAXGenerator";
 import './App.css';
 
-
 function App() {
   const randomIndex = Math.floor(Math.random() * 10000);
   const randomGender = Math.round(Math.random());
