@@ -35,24 +35,3 @@
   display: flex;
   align-self: center;
 }
-
-.hotkey {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.new_box_element {
-  margin-bottom: 44px !important;
-  display: flex;
-  justify-content: center;  
-}
-
-.inn_box_element {
-  display: flex;
-  align-self: center;
-}
-.refresh_box_element {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 22px !important
-}

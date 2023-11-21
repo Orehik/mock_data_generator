@@ -15,6 +15,7 @@ import { maleNames } from "./dataNames/maleNames";
 import { TAXGenerator } from "./helpers/TAXGenerator";
 import './App.css';
 
+
 function App() {
   const randomIndex = Math.floor(Math.random() * 10000);
   const randomGender = Math.round(Math.random());
@@ -57,17 +58,11 @@ function App() {
 
   return (
     <div className="parent_container">
-      <div className="hotkey">
-        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_1, "_blank")}>Дев 1</BaseButton>
-        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_2, "_blank")}>Дев 2</BaseButton>
-        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_STABLE, "_blank")}>Стейбл</BaseButton>
-        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_SUMSUB, "_blank")}>САМСАБ</BaseButton>
-      </div>
       <BaseButton className="box_element" onClick={() => getStarted()}>Сгенерировать</BaseButton>
       <div className="div_container">
         <div>
           <Box className="box_container">
-            <BaseInput 
+            <BaseInput
               label={INPUT_LABELS.phone_number}
               value={phoneNumber}
             />
@@ -112,20 +107,16 @@ function App() {
           </Box>
         </div>
       </div>
-      <div className="inn_box_element">
+      <div className="box_element">
+        <RefreshInn onClick={() => innGenerator()}/>
         <Box className="box_container">
           <BaseInput
             label={INPUT_LABELS.inn}
             value={inn}
           />
           <BaseButton className="copy_button" onClick={() => copyValue(inn)}>Копировать</BaseButton>
+          <BaseButton className="copy_button" onClick={() => copyValue(arrayValue)}>Копировать всё</BaseButton>
         </Box>
-      </div>
-      <div className="refresh_box_element">
-        <RefreshInn onClick={() => innGenerator()}/>
-        </div>
-      <div className="new_box_element">
-        <BaseButton onClick={() => copyValue(arrayValue)}>Копировать всё</BaseButton>
       </div>
     </div>
   )
