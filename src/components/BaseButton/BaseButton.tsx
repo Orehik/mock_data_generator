@@ -4,10 +4,11 @@ import { Button } from '@mui/material';
 interface IProps {
   onClick: () => void,
   children: React.ReactNode,
+  className?: string,
 }
 
-export const BaseButton = ({onClick, children, ...props}: IProps) => {
+export const BaseButton = ({onClick, children, className, ...props}: IProps) => {
   return (
-      <Button style={{backgroundColor: "#222222"}} variant="contained" onClick={onClick} {...props}>{children}</Button>
+      <Button className={className} style={{backgroundColor: "#222222"}} variant="contained" onClick={onClick} {...props}>{children}</Button>
   );
 }
