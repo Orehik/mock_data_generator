@@ -58,10 +58,15 @@ function App() {
   return (
     <div className="parent_container">
       <div className="hotkey">
-        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_1, "_blank")}>Дев 1</BaseButton>
-        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_2, "_blank")}>Дев 2</BaseButton>
+        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_1, "_blank")}>ДЕВ 1</BaseButton>
+        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_2, "_blank")}>ДЕВ 2</BaseButton>
         <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_STABLE, "_blank")}>Стейбл</BaseButton>
         <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_SUMSUB, "_blank")}>САМСАБ</BaseButton>
+      </div>
+      <div className="hotkey">
+        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_PROD, "_blank")}>ПРОД</BaseButton>
+        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_REGRESS, "_blank")}>РЕГРЕСС</BaseButton>
+        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_TABLE, "_blank")}>ТАБЛИЦА</BaseButton>
       </div>
       <BaseButton className="box_element" onClick={() => getStarted()}>Сгенерировать</BaseButton>
       <div className="div_container">
