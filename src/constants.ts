@@ -1,13 +1,13 @@
 import { INPUT_LABELSProps } from "./types/type";
 
 export const INPUT_LABELS: INPUT_LABELSProps = {
-  "phone_number": "Номер телефона",
-  "lastname": "Фамилия",
-  "firstname": "Имя",
-  "middlename": "Отчество",
-  "password": "Пароль",
-  "email_address": "e-mail адрес",
-  "inn": "ИНН",
+  "phone_number": "Phone number",
+  "lastname": "Lastname",
+  "firstname": "Name",
+  "middlename": "Middlename",
+  "password": "Password",
+  "email_address": "Email",
+  "inn": "TAX ID",
 };
 
 export const CONVERTER = {
