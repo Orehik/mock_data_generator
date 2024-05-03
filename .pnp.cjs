@@ -38,6 +38,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:4.6.0"],\
           ["eslint-plugin-react-refresh", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:0.4.3"],\
+          ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:18.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
@@ -3923,6 +3924,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:4.6.0"],\
           ["eslint-plugin-react-refresh", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:0.4.3"],\
+          ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:4ffdba27bfb76ce88526fd3ce09d39518bcbb189554039b7eedf422c9df7cd2ab4b48d111fa923fb876e72d2a82c10c8e27475a949ef48f69bb8b603ced305ad#npm:18.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
@@ -4261,6 +4263,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/prelude-ls-npm-1.2.1-3e4d272a55-10c0.zip/node_modules/prelude-ls/",\
         "packageDependencies": [\
           ["prelude-ls", "npm:1.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["prettier", [\
+      ["npm:3.2.5", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.2.5-6859110d6a/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.2.5"]\
         ],\
         "linkType": "HARD"\
       }]\
