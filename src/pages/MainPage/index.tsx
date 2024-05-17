@@ -112,7 +112,7 @@ const MainPage = () => {
         <BaseButton
           className="copy_button"
           onClick={() => {
-            !!sumSubToken.trim() && window.open(`/sumsub/${sumSubToken}`, "_blank", "rel=noopener noreferrer")
+            !!sumSubToken.trim() && navigate(`/sumsub/${sumSubToken}`)
           }}
         >
           SumSub SDK
