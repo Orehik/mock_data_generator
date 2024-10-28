@@ -85,6 +85,9 @@ const MainPage = () => {
         <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_2, "_blank")}>
           Dev 2
         </BaseButton>
+        <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_DEV_3, "_blank")}>
+          Dev 3
+        </BaseButton>
         <BaseButton className="copy_button" onClick={() => window.open(import.meta.env.VITE_STABLE, "_blank")}>
           Stable
         </BaseButton>
