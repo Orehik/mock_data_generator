@@ -15,6 +15,7 @@ const SumSub = () => {
         expirationHandler={() => {}}
         config={{
           lang: "en",
+          country: "RUS"
         }}
         onMessage={(type: any, payload: any) => {
           console.log("WebSDK onMessage", type, payload);
